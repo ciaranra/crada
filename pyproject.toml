@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
+
+[project]
+name = "crada"
+version = "0.1.0"
+authors = [
+    {name = "Ciarán Ryan-Anderson", email = "ciaranra@gmail.com"}
+]
+description = "A package combining Rust and Python to implement basic data structures, algorithms,and helper functions."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+
+[tool.maturin]
+python-source = "python"
+features = ["pyo3/extension-module"]
